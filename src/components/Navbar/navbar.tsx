@@ -3,10 +3,11 @@ import React from "react";
 // Interfaces
 import { NavBarProps, RouteProps } from "configs/interfaces";
 
-import "components/Navbar/navbar.scss";
-
 // Components
 import NavIcon from "components/Navbar/NavIcon/navicon";
+
+// Styling
+import "components/Navbar/navbar.scss";
 
 const NavBar = ({ routes }: NavBarProps) => {
     return (

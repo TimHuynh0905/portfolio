@@ -2,7 +2,8 @@ import React from "react";
 
 // Routes
 import { Route, Routes as Switch, Navigate } from "react-router-dom";
-import Routes from "routes";
+import { RouteProps } from "configs/interfaces";
+import routes from "routes";
 
 // Components
 import NavBar from "components/Navbar/navbar";
@@ -12,8 +13,8 @@ import Footer from "components/Footer/footer";
 import Particles from "react-tsparticles";
 import { particles } from "./configs/particles";
 
+// Stylings
 import "./App.scss";
-import { RouteProps } from "configs/interfaces";
 
 const App = () => {
     const getRoutes = (routes: RouteProps[]) =>
@@ -27,7 +28,7 @@ const App = () => {
                     <Route
                         path={route.route.path}
                         key={route.key}
-                        element={<route.route.element />}
+                        element={route.route.element}
                     />
                 );
             }
@@ -41,12 +42,12 @@ const App = () => {
             <div id="container">
                 {/* Navigation */}
                 <div id="nav">
-                    <NavBar routes={Routes} />
+                    <NavBar routes={routes} />
                 </div>
                 {/* Main Content */}
                 <div id="main">
                     <Switch>
-                        {getRoutes(Routes)}
+                        {getRoutes(routes)}
                         <Route path="/" element={<Navigate to="/home" />} />
                     </Switch>
                 </div>

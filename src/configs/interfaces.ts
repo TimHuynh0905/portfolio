@@ -14,7 +14,7 @@ export interface RouteProps {
     key: string;
     route?: {
         path: string;
-        element: () => JSX.Element;
+        element: JSX.Element;
     };
     href?: string;
     icon: IconDefinition;

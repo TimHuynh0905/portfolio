@@ -1,4 +1,6 @@
 import React from "react";
+
+// Styling
 import "components/Footer/footer.scss";
 
 const Footer = () => (

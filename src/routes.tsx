@@ -1,5 +1,9 @@
+import React from "react";
+
 // Page Component
 import Home from "pages/home/home";
+import About from "pages/about/about";
+import Projects from "pages/projects/projects";
 
 // Font Awesome Icons
 import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
@@ -11,13 +15,14 @@ import {
 
 // Interfaces
 import { RouteProps } from "configs/interfaces";
-const Routes: RouteProps[] = [
+
+const routes: RouteProps[] = [
     {
         name: "Home",
         key: "home",
         route: {
             path: "/home",
-            element: Home,
+            element: <Home />,
         },
         icon: faHome,
     },
@@ -26,7 +31,7 @@ const Routes: RouteProps[] = [
         key: "about",
         route: {
             path: "/about",
-            element: Home,
+            element: <About />,
         },
         icon: faUser,
     },
@@ -35,7 +40,7 @@ const Routes: RouteProps[] = [
         key: "projects",
         route: {
             path: "/projects",
-            element: Home,
+            element: <Projects />,
         },
         icon: faAppStore,
     },
@@ -53,4 +58,4 @@ const Routes: RouteProps[] = [
     },
 ];
 
-export default Routes;
+export default routes;

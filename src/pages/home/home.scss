@@ -1,0 +1,61 @@
+.home {
+    width: 100%;
+    display: flex;
+
+    .row {
+        @media screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3.5em 2.5em;
+
+        @media screen and (max-width: 768px) {
+            align-items: center;
+            padding: 2em 1em;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        p {
+            letter-spacing: -0.015em;
+            font-size: 1.5em;
+            margin: 0.25em 0 0 0;
+            color: #aaa;
+        }
+
+        @media screen and (max-width: 425px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    #cover {
+        padding: 0;
+        .image {
+            // border: 1px solid blue;
+            position: relative;
+            z-index: -1;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 10cm;
+            width: 100%;
+            box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
+                0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
+        }
+    }
+}
