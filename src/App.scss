@@ -1,0 +1,44 @@
+.App {
+    #container {
+        position: relative;
+        z-index: 1 !important;
+        // border: 1px solid #ffffff;
+        width: 70%;
+        max-width: 1100px;
+        margin: auto;
+        margin-top: 8%;
+
+        @media screen and (max-width: 725px) {
+            margin-top: 25%;
+            #nav {
+                display: none;
+            }
+        }
+
+        #nav {
+            // border: 1px solid #ffffff;
+            width: 100%;
+        }
+
+        #main {
+            position: relative;
+            // border: 1px solid blue;
+            background: white;
+            z-index: 2;
+            display: flex;
+            margin-top: 32px;
+            height: 10cm;
+            border-radius: 10px;
+            box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+            transition: min-height 0.5s ease-in-out,
+                max-height 0.25s ease-in-out;
+        }
+
+        #footer {
+            z-index: 100;
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+        }
+    }
+}
