@@ -5,8 +5,8 @@
     align-items: center;
     width: 100%;
 
-    @media screen and (max-width: 600px) {
-        padding: 20px 10px;
+    h2 {
+        margin-bottom: 50px;
     }
 
     .row {
@@ -23,8 +23,9 @@
     }
 
     #intro {
-        margin: 50px 0;
-
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
         #image {
             .profile-image {
                 width: 100%;
@@ -70,21 +71,54 @@
 
         #info {
             text-align: center;
-            p {
-                line-height: 35px;
-                font-size: 20px;
-                margin: 0;
-                color: rgb(119, 119, 119);
-            }
 
-            #left {
-                font-weight: 300;
-                font-style: italic;
-            }
+            .container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
 
-            #right {
-                font-weight: 700;
+                p {
+                    margin: 0;
+                    color: rgb(119, 119, 119);
+                }
+
+                #quote {
+                    font-size: 1.5em;
+                    font-weight: 300;
+                    font-style: italic;
+                }
+
+                #left {
+                    font-size: 1.25em;
+                    font-weight: 300;
+                    font-style: italic;
+                }
+
+                #right {
+                    font-size: 1.25em;
+                    font-weight: 700;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    padding: 0;
+                }
+
+                @media screen and (max-width: 450px) {
+                    #quote {
+                        font-size: 1em;
+                    }
+
+                    #left,
+                    #right {
+                        font-size: 1em;
+                    }
+                }
             }
         }
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 40px 0px;
     }
 }

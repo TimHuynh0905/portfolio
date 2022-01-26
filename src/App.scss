@@ -7,6 +7,8 @@
         max-width: 1100px;
         margin: auto;
         margin-top: 8%;
+        margin-bottom: 8%;
+        transition: opacity 1s ease-in-out;
 
         @media screen and (max-width: 720px) {
             margin-top: 25%;
@@ -23,6 +25,7 @@
         #main {
             position: relative;
             display: flex;
+            width: 100%;
             background: white;
             z-index: 2;
             margin-top: 28px;
@@ -31,6 +34,10 @@
             transition: min-height 0.5s ease-in-out,
                 max-height 0.25s ease-in-out;
             overflow: hidden;
+
+            .panel {
+                transition: opacity 0.25s ease-in-out;
+            }
         }
 
         #footer {

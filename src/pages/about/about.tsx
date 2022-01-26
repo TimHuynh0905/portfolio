@@ -51,7 +51,7 @@ const About = () => {
         },
     ];
     return (
-        <div className="about">
+        <div className="panel about">
             <h2>&lt; About &#9996;/&gt;</h2>
             <div className="container">
                 <div id="intro" className="row">
@@ -80,12 +80,7 @@ const About = () => {
                         <div className="container">
                             <div className="row my-3">
                                 <div className="col">
-                                    <p
-                                        style={{
-                                            fontWeight: 300,
-                                            fontStyle: "italic",
-                                        }}
-                                    >
+                                    <p id="quote">
                                         &quot;A computer enthusiast with a
                                         passion in Software Engineering,
                                         especially in using RESTful APIs to
@@ -96,20 +91,26 @@ const About = () => {
                                     </p>
                                 </div>
                             </div>
-                            {intros.map((intro) => (
-                                <div key={intro.label} className="row my-1">
-                                    <div className="col-6">
-                                        <p id="left">{intro.label}</p>
+                            <div>
+                                {intros.map((intro) => (
+                                    <div key={intro.label} className="row my-3">
+                                        <div className="col-6">
+                                            <p id="left">{intro.label}</p>
+                                        </div>
+                                        <div className="col-6">
+                                            <p id="right">{intro.value}</p>
+                                        </div>
                                     </div>
-                                    <div className="col-6">
-                                        <p id="right">{intro.value}</p>
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <hr className="w-100 my-5" />
+            <h2>&lt; Skills &#9994;/&gt;</h2>
+            <hr className="w-100 my-5" />
+            <div></div>
         </div>
     );
 };

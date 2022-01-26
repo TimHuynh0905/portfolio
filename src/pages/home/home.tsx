@@ -1,11 +1,11 @@
 import React from "react";
-import CoverImage from "assets/images/standing_straight.jpeg";
+import CoverImage from "assets/images/skydeck.jpeg";
 // Styling
 import "pages/home/home.scss";
 
 const Home = () => {
     return (
-        <div className="home">
+        <div className="panel home">
             <div className="container">
                 <div className="row">
                     <div id="intro" className="col-12 col-md-7">
