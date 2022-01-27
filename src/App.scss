@@ -1,4 +1,7 @@
 .App {
+    display: flex;
+    min-height: 100vh;
+
     #container {
         position: relative;
         z-index: 1 !important;
@@ -6,19 +9,15 @@
         width: 70%;
         max-width: 1100px;
         margin: auto;
-        margin-top: 8%;
-        margin-bottom: 8%;
+        margin-top: 220px;
+        margin-bottom: 220px;
         transition: opacity 1s ease-in-out;
 
-        @media screen and (max-width: 720px) {
-            margin-top: 25%;
-            #nav {
-                display: none;
-            }
-        }
-
         #nav {
-            // border: 1px solid #ffffff;
+            // border: 1px solid red;
+            position: absolute;
+            z-index: 100;
+            top: -105px;
             width: 100%;
         }
 
@@ -26,9 +25,10 @@
             position: relative;
             display: flex;
             width: 100%;
+            min-height: 100%;
             background: white;
             z-index: 2;
-            margin-top: 28px;
+            // margin-top: 28px;
             border-radius: 20px;
             box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
             transition: min-height 0.5s ease-in-out,
@@ -38,6 +38,29 @@
             .panel {
                 transition: opacity 0.25s ease-in-out;
             }
+
+            .arrow {
+                border: 1px solid black;
+                display: block;
+                position: fixed;
+                z-index: 5;
+                height: 44px;
+                width: 44px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: white;
+                border-radius: 50%;
+                box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
+                    0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
+
+                &#left {
+                    left: calc(15% - 22px);
+                }
+
+                &#right {
+                    right: calc(15% - 22px);
+                }
+            }
         }
 
         #footer {
@@ -45,6 +68,15 @@
             position: absolute;
             bottom: -50px;
             width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-top: 15%;
+            margin-bottom: 15%;
+
+            #nav {
+                display: none;
+            }
         }
     }
 }

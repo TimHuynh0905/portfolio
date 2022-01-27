@@ -50,6 +50,8 @@ const App = () => {
                         {getRoutes(routes)}
                         <Route path="/" element={<Navigate to="/home" />} />
                     </Switch>
+                    <div id="left" className="arrow"></div>
+                    <div id="right" className="arrow"></div>
                 </div>
                 {/* Footer */}
                 <div id="footer">

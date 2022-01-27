@@ -59,7 +59,7 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 12cm;
+            height: calc(100vh - 220px * 2);
             width: 100%;
             box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
                 0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
