@@ -21,7 +21,7 @@ export const navRoutes: RouteProps[] = [
         name: "Home",
         key: "home",
         route: {
-            path: "/home",
+            path: "/",
             element: <Home />,
         },
         icon: faHome,

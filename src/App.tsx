@@ -88,10 +88,7 @@ const App = () => {
                 </div>
                 {/* Main Content */}
                 <div id="main">
-                    <Switch>
-                        {getRoutes(routes)}
-                        <Route path="/" element={<Navigate to="/home" />} />
-                    </Switch>
+                    <Switch>{getRoutes(routes)}</Switch>
                     {pageIndex! > 0 && (
                         <div
                             id="left"
