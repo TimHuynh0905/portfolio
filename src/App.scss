@@ -4,14 +4,21 @@
 
     #container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         z-index: 1 !important;
-        // border: 1px solid #ffffff;
         width: 70%;
         max-width: 1100px;
         margin: auto;
         margin-top: 220px;
         margin-bottom: 220px;
         transition: opacity 1s ease-in-out;
+
+        .wrapper {
+            position: relative;
+        }
 
         #nav {
             // border: 1px solid red;
@@ -25,7 +32,7 @@
             position: relative;
             display: flex;
             width: 100%;
-            min-height: 100%;
+            min-height: fit-content;
             background: white;
             z-index: 2;
             // margin-top: 28px;
@@ -82,7 +89,7 @@
                     }
                 }
 
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 992px) {
                     display: none;
                 }
             }
@@ -95,9 +102,10 @@
             width: 100%;
         }
 
-        @media screen and (max-width: 768px) {
-            margin-top: 15%;
-            margin-bottom: 15%;
+        @media screen and (max-width: 992px) {
+            justify-content: center;
+            width: 70%;
+            margin: auto;
 
             #nav {
                 display: none;

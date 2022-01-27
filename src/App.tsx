@@ -82,35 +82,37 @@ const App = () => {
         <div className="App">
             {/* Wrapper */}
             <div id="container">
-                {/* Navigation */}
-                <div id="nav">
-                    <NavBar routes={routes} />
-                </div>
-                {/* Main Content */}
-                <div id="main">
-                    <Switch>{getRoutes(routes)}</Switch>
-                    {pageIndex! > 0 && (
-                        <div
-                            id="left"
-                            className="arrow"
-                            onClick={() => prevPage()}
-                        >
-                            <FontAwesomeIcon icon={faChevronLeft} />
-                        </div>
-                    )}
-                    {pageIndex < navRoutes.length - 1 && (
-                        <div
-                            id="right"
-                            className="arrow"
-                            onClick={() => nextPage()}
-                        >
-                            <FontAwesomeIcon icon={faChevronRight} />
-                        </div>
-                    )}
-                </div>
-                {/* Footer */}
-                <div id="footer">
-                    <Footer />
+                <div className="wrapper">
+                    {/* Navigation */}
+                    <div id="nav">
+                        <NavBar routes={routes} />
+                    </div>
+                    {/* Main Content */}
+                    <div id="main">
+                        <Switch>{getRoutes(routes)}</Switch>
+                        {pageIndex! > 0 && (
+                            <div
+                                id="left"
+                                className="arrow"
+                                onClick={() => prevPage()}
+                            >
+                                <FontAwesomeIcon icon={faChevronLeft} />
+                            </div>
+                        )}
+                        {pageIndex < navRoutes.length - 1 && (
+                            <div
+                                id="right"
+                                className="arrow"
+                                onClick={() => nextPage()}
+                            >
+                                <FontAwesomeIcon icon={faChevronRight} />
+                            </div>
+                        )}
+                    </div>
+                    {/* Footer */}
+                    <div id="footer">
+                        <Footer />
+                    </div>
                 </div>
             </div>
             {/* Background */}

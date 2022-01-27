@@ -8,7 +8,7 @@ const Home = () => {
         <div className="panel home">
             <div className="container">
                 <div className="row">
-                    <div id="intro" className="col-12 col-md-7">
+                    <div id="intro" className="col-12 col-lg-6">
                         <h1
                             style={{
                                 color: "rgb(28, 30, 48)",
@@ -19,13 +19,14 @@ const Home = () => {
                         <p>&lt;Software Engineer /&gt;</p>
                         <p>&#9917;&#127934;&#128200;&#128075;</p>
                     </div>
-                    <div id="cover" className="col-12 col-md-5">
-                        <div
+                    <div id="cover" className="col-12 col-lg-6">
+                        {/* <div
                             className="image"
                             style={{
                                 backgroundImage: `url(${CoverImage})`,
                             }}
-                        />
+                        /> */}
+                        <img src={CoverImage} />
                     </div>
                 </div>
             </div>
