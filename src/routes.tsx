@@ -16,7 +16,7 @@ import {
 // Interfaces
 import { RouteProps } from "configs/interfaces";
 
-const routes: RouteProps[] = [
+export const navRoutes: RouteProps[] = [
     {
         name: "Home",
         key: "home",
@@ -44,6 +44,9 @@ const routes: RouteProps[] = [
         },
         icon: faAppStore,
     },
+];
+
+export const hrefRoutes: RouteProps[] = [
     {
         name: "LinkedIn",
         key: "linkedin",
@@ -58,4 +61,4 @@ const routes: RouteProps[] = [
     },
 ];
 
-export default routes;
+export default [...navRoutes, ...hrefRoutes];

@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Routes
-import { Route, Routes as Switch, Navigate } from "react-router-dom";
+import {
+    Route,
+    Routes as Switch,
+    Navigate,
+    useNavigate,
+    useLocation,
+} from "react-router-dom";
 import { RouteProps } from "configs/interfaces";
-import routes from "routes";
+import routes, { navRoutes } from "routes";
+
+// Font Awesome
+import {
+    faChevronRight,
+    faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Components
 import NavBar from "components/Navbar/navbar";
 import Footer from "components/Footer/footer";
 
-// Particles.js configurations
+// Particles.js
 import Particles from "react-tsparticles";
 import { particles } from "./configs/particles";
 
@@ -17,6 +30,22 @@ import { particles } from "./configs/particles";
 import "./App.scss";
 
 const App = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [pageIndex, setPageIndex] = useState<number>(0);
+
+    useEffect(() => {
+        const currIndex = navRoutes.findIndex(
+            (route) => route.route!.path === location.pathname
+        );
+        if (currIndex === -1) {
+            setPageIndex(0);
+            navigate("/");
+        } else {
+            setPageIndex(currIndex);
+        }
+    }, []);
+
     const getRoutes = (routes: RouteProps[]) =>
         routes.map((route: RouteProps) => {
             let returnValue = null;
@@ -36,6 +65,19 @@ const App = () => {
             return returnValue;
         });
 
+    const prevPage = () => {
+        const newIndex = pageIndex > 0 ? pageIndex - 1 : pageIndex;
+        setPageIndex(newIndex);
+        navigate(navRoutes[newIndex].route!.path);
+    };
+
+    const nextPage = () => {
+        const newIndex =
+            pageIndex < navRoutes.length - 1 ? pageIndex + 1 : pageIndex;
+        setPageIndex(newIndex);
+        navigate(navRoutes[newIndex].route!.path);
+    };
+
     return (
         <div className="App">
             {/* Wrapper */}
@@ -50,8 +92,24 @@ const App = () => {
                         {getRoutes(routes)}
                         <Route path="/" element={<Navigate to="/home" />} />
                     </Switch>
-                    <div id="left" className="arrow"></div>
-                    <div id="right" className="arrow"></div>
+                    {pageIndex! > 0 && (
+                        <div
+                            id="left"
+                            className="arrow"
+                            onClick={() => prevPage()}
+                        >
+                            <FontAwesomeIcon icon={faChevronLeft} />
+                        </div>
+                    )}
+                    {pageIndex < navRoutes.length - 1 && (
+                        <div
+                            id="right"
+                            className="arrow"
+                            onClick={() => nextPage()}
+                        >
+                            <FontAwesomeIcon icon={faChevronRight} />
+                        </div>
+                    )}
                 </div>
                 {/* Footer */}
                 <div id="footer">
