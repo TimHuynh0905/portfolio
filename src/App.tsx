@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import {
     Route,
     Routes as Switch,
-    Navigate,
     useNavigate,
     useLocation,
 } from "react-router-dom";
@@ -90,6 +89,15 @@ const App = () => {
                     {/* Main Content */}
                     <div id="main">
                         <Switch>{getRoutes(routes)}</Switch>
+                    </div>
+                    {/* Footer */}
+                    <div id="footer">
+                        <Footer />
+                    </div>
+                </div>
+
+                <div className="nav-small">
+                    <div className="nav-arrows">
                         {pageIndex! > 0 && (
                             <div
                                 id="left"
@@ -108,10 +116,6 @@ const App = () => {
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </div>
                         )}
-                    </div>
-                    {/* Footer */}
-                    <div id="footer">
-                        <Footer />
                     </div>
                 </div>
             </div>

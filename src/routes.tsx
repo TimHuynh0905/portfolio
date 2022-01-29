@@ -3,15 +3,11 @@ import React from "react";
 // Page Component
 import Home from "pages/home/home";
 import About from "pages/about/about";
-import Projects from "pages/projects/projects";
+import Experiences from "pages/experiences/experiences";
 
 // Font Awesome Icons
-import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
-import {
-    faAppStore,
-    faLinkedin,
-    faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import { faHome, faUser, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 // Interfaces
 import { RouteProps } from "configs/interfaces";
@@ -36,13 +32,13 @@ export const navRoutes: RouteProps[] = [
         icon: faUser,
     },
     {
-        name: "Projects",
-        key: "projects",
+        name: "Experiences",
+        key: "experiences",
         route: {
-            path: "/projects",
-            element: <Projects />,
+            path: "/experiences",
+            element: <Experiences />,
         },
-        icon: faAppStore,
+        icon: faBriefcase,
     },
 ];
 

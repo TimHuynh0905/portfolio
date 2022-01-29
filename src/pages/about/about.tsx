@@ -15,7 +15,7 @@ const About = () => {
             <h2 className="mb-5">&lt; About &#9996;/&gt;</h2>
             <div id="intro" className="container">
                 <div className="row">
-                    <div id="image" className="col-12 col-sm-12 col-xl-4">
+                    <div id="image" className="col-12 col-sm-12 col-lg-4">
                         <div className="profile-image">
                             <div
                                 className="image"
@@ -36,7 +36,7 @@ const About = () => {
                             ))}
                         </div>
                     </div>
-                    <div id="info" className="col-12 col-sm-12 col-xl-8">
+                    <div id="info" className="col-12 col-sm-12 col-lg-8">
                         <div className="container">
                             <div className="row my-3">
                                 <div className="col">
