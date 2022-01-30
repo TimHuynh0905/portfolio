@@ -1,8 +1,27 @@
 import React from "react";
+
+// Components
+import Timeline from "components/Timeline/timeline";
+
+// Data
+import experiences from "pages/experiences/data";
+
+// Styling
 import "pages/experiences/experiences.scss";
 
 const Experiences = () => {
-    return <div></div>;
+    return (
+        <div className="panel experiences">
+            <h2 className="mb-5">
+                &lt; Experiences &#128104;&#8205;&#128187;/&gt;
+            </h2>
+            <Timeline
+                items={experiences.sort(
+                    (a, b) => b.endDate.getTime() - a.endDate.getTime()
+                )}
+            />
+        </div>
+    );
 };
 
 export default Experiences;

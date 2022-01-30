@@ -1,5 +1,4 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 
 export interface NavBarProps {
     routes: RouteProps[];
@@ -18,4 +17,13 @@ export interface RouteProps {
     };
     href?: string;
     icon: IconDefinition;
+}
+
+export interface ExperienceItemProps {
+    startDate: Date;
+    endDate: Date;
+    location: string;
+    logo: string;
+    role: string;
+    skills: string[];
 }
