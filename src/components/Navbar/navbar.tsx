@@ -10,13 +10,13 @@ import NavIcon from "components/Navbar/NavIcon/navicon";
 import "components/Navbar/navbar.scss";
 
 const NavBar = ({ routes }: NavBarProps) => {
-    return (
-        <div className="navbar">
-            {routes.map((route: RouteProps) => {
-                return <NavIcon key={route.key} route={route} />;
-            })}
-        </div>
-    );
+  return (
+    <div className="navbar">
+      {routes.map((route: RouteProps) => {
+        return <NavIcon key={route.key} route={route} />;
+      })}
+    </div>
+  );
 };
 
 export default NavBar;

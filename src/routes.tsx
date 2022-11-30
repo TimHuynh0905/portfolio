@@ -13,48 +13,48 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { RouteProps } from "configs/interfaces";
 
 export const navRoutes: RouteProps[] = [
-    {
-        name: "Home",
-        key: "home",
-        route: {
-            path: "/",
-            element: <Home />,
-        },
-        icon: faHome,
+  {
+    name: "Home",
+    key: "home",
+    route: {
+      path: "/",
+      element: <Home />,
     },
-    {
-        name: "About",
-        key: "about",
-        route: {
-            path: "/about",
-            element: <About />,
-        },
-        icon: faUser,
+    icon: faHome,
+  },
+  {
+    name: "About",
+    key: "about",
+    route: {
+      path: "/about",
+      element: <About />,
     },
-    {
-        name: "Experiences",
-        key: "experiences",
-        route: {
-            path: "/experiences",
-            element: <Experiences />,
-        },
-        icon: faBriefcase,
+    icon: faUser,
+  },
+  {
+    name: "Experiences",
+    key: "experiences",
+    route: {
+      path: "/experiences",
+      element: <Experiences />,
     },
+    icon: faBriefcase,
+  },
 ];
 
 export const hrefRoutes: RouteProps[] = [
-    {
-        name: "LinkedIn",
-        key: "linkedin",
-        href: "https://www.linkedin.com/in/qthuynh9501",
-        icon: faLinkedin,
-    },
-    {
-        name: "GitHub",
-        key: "github",
-        href: "https://github.com/TimHuynh0905",
-        icon: faGithub,
-    },
+  {
+    name: "LinkedIn",
+    key: "linkedin",
+    href: "https://www.linkedin.com/in/qthuynh9501",
+    icon: faLinkedin,
+  },
+  {
+    name: "GitHub",
+    key: "github",
+    href: "https://github.com/TimHuynh0905",
+    icon: faGithub,
+  },
 ];
 
 export default [...navRoutes, ...hrefRoutes];
