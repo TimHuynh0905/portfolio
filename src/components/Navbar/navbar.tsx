@@ -8,12 +8,15 @@ import NavIcon from "components/Navbar/NavIcon/navicon";
 
 // Styling
 import "components/Navbar/navbar.scss";
+import { useLocation } from "react-router-dom";
 
 const NavBar = ({ routes }: NavBarProps) => {
+  const location = useLocation();
   return (
     <div className="navbar">
       {routes.map((route: RouteProps) => {
-        return <NavIcon key={route.key} route={route} />;
+        const active = route.route?.path === location.hash;
+        return <NavIcon active={active} key={route.key} route={route} />;
       })}
     </div>
   );

@@ -68,6 +68,21 @@
     }
   }
 
+  &.active {
+    .icon {
+      transform-style: preserve-3d;
+
+      svg {
+        opacity: 1;
+      }
+
+      &:after {
+        border-bottom-width: 2em;
+        transform: translateZ(-1px);
+      }
+    }
+  }
+
   &:hover {
     svg {
       opacity: 1;
@@ -75,18 +90,6 @@
 
     .tag {
       opacity: 1;
-    }
-  }
-}
-
-.active {
-  .icon {
-    svg {
-      opacity: 1;
-    }
-
-    &:after {
-      border-bottom-width: 2em;
     }
   }
 }

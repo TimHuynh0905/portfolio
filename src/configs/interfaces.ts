@@ -6,6 +6,7 @@ export interface NavBarProps {
 
 export interface NavIconProps {
   route: RouteProps;
+  active: boolean;
 }
 
 export interface RouteProps {
