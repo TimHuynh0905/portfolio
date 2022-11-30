@@ -57,4 +57,6 @@ export const hrefRoutes: RouteProps[] = [
   },
 ];
 
-export default [...navRoutes, ...hrefRoutes];
+const routes = [...navRoutes, ...hrefRoutes];
+
+export default routes;

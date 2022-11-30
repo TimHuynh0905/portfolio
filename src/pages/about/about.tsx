@@ -32,7 +32,9 @@ const About = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                   className={social.class}
-                />
+                >
+                  {" "}
+                </a>
               ))}
             </div>
           </div>

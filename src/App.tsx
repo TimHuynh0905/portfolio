@@ -43,7 +43,7 @@ const App = () => {
     } else {
       setPageIndex(currIndex);
     }
-  }, []);
+  }, [location.pathname]);
 
   const getRoutes = (routes: RouteProps[]) =>
     routes.map((route: RouteProps) => {

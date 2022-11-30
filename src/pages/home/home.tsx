@@ -15,17 +15,17 @@ const Home = () => {
           >
             Quoc Huynh
           </h1>
-          <p>&lt;Software Engineer /&gt;</p>
+          <code
+            style={{
+              fontSize: "24px",
+            }}
+          >
+            &lt;Software Engineer /&gt;
+          </code>
           <p>&#9917;&#127934;&#128200;&#128075;</p>
         </div>
         <div id="cover" className="col-12 col-lg-6">
-          {/* <div
-                            className="image"
-                            style={{
-                                backgroundImage: `url(${CoverImage})`,
-                            }}
-                        /> */}
-          <img src={CoverImage} />
+          <img alt="cover" src={CoverImage} />
         </div>
       </div>
     </div>

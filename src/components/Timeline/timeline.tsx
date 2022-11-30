@@ -1,7 +1,7 @@
 import React from "react";
 
 // Material UI Components
-import { Timeline as MUTimeline } from "@mui/lab";
+import { Timeline as MaterialTimeline } from "@mui/lab";
 import { ThemeProvider, Typography } from "@mui/material";
 
 // Components
@@ -18,11 +18,11 @@ interface TimeLineProps {
 const Timeline = ({ items }: TimeLineProps) => {
   return (
     <ThemeProvider theme={theme}>
-      <MUTimeline position="alternate">
+      <MaterialTimeline position="alternate" onResize onResizeCapture>
         {items.map((item, key) => (
           <TimelineItem key={key} {...item} />
         ))}
-      </MUTimeline>
+      </MaterialTimeline>
       <Typography
         variant="subtitle1"
         color="text.secondary"

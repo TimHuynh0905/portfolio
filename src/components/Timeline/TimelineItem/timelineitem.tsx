@@ -87,6 +87,7 @@ const TimelineItem = (item: ExperienceItemProps) => {
           style={{
             marginTop: "30px",
           }}
+          alt="logo"
         />
         <Typography
           variant="subtitle1"
