@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Packages
 import { useLocation } from "react-router-dom";
+import { Height } from "react-animate-height";
 
-// Routes
-import routes, { navRoutes } from "routes";
-
-// Font Awesome
-import {
-  faChevronRight,
-  faChevronLeft,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// Routes & Pages
+import routes from "routes";
+import Home from "pages/home/home";
+import About from "pages/about/about";
+import Experiences from "pages/experiences/experiences";
 
 // Components
 import NavBar from "components/Navbar/navbar";
@@ -23,19 +20,21 @@ import { particles } from "./configs/particles";
 
 // Stylings
 import "./App.scss";
+import withAnimation from "lib/withAnimation";
+
+const AnimatedHome = withAnimation(Home);
+const AnimatedAbout = withAnimation(About);
+const AnimatedExperiences = withAnimation(Experiences);
 
 const App = () => {
   const location = useLocation();
+  const [hash, setHash] = useState<string>(location.hash);
 
-  useEffect(() => {
-    console.log(location.hash);
-  }, [location.hash]);
-
-  const updateMainContent = (hash: string): JSX.Element => {
-    const contentElement = navRoutes.find(
-      (route) => route.route?.path === hash
-    );
-    return contentElement?.route?.element || <></>;
+  const setHeight = (expectedHash: string): Height => {
+    if (location.hash === expectedHash && hash === expectedHash) {
+      return "auto";
+    }
+    return 0;
   };
 
   return (
@@ -46,14 +45,24 @@ const App = () => {
         <NavBar routes={routes} />
         {/* Main Content */}
         <div id="main">
-          {/* <Home /> */}
-          {updateMainContent(location.hash)}
+          <AnimatedHome
+            height={setHeight("")}
+            onHeightAnimationEnd={() => setHash(location.hash)}
+          />
+          <AnimatedAbout
+            height={setHeight("#about")}
+            onHeightAnimationEnd={() => setHash(location.hash)}
+          />
+          <AnimatedExperiences
+            height={setHeight("#experiences")}
+            onHeightAnimationEnd={() => setHash(location.hash)}
+          />
         </div>
         {/* Footer */}
         <Footer />
       </div>
       {/* Background */}
-      {/* <Particles options={particles} /> */}
+      <Particles options={particles} />
     </div>
   );
 };

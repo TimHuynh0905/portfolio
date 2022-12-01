@@ -1,4 +1,5 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 export interface NavBarProps {
   routes: RouteProps[];
@@ -14,7 +15,7 @@ export interface RouteProps {
   key: string;
   route?: {
     path: string;
-    element: JSX.Element;
+    element: React.FC;
   };
   href?: string;
   icon: IconDefinition;
