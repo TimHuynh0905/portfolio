@@ -11,7 +11,7 @@ import About from "pages/about/about";
 import Experiences from "pages/experiences/experiences";
 
 // Components
-import NavBar from "components/Navbar/Navbar";
+import NavBar from "components/Navbar/navbar";
 import Footer from "components/Footer/footer";
 
 // Particles.js
