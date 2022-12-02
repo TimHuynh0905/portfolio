@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import Timeline from "components/Timeline/Timeline";
+import Timeline from "components/Timeline/timeline";
 
 // Data
 import experiences from "pages/experiences/data";

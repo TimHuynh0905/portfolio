@@ -7,7 +7,7 @@ import { NavBarProps, RouteProps } from "configs/interfaces";
 import NavIcon from "components/Navbar/NavIcon/navicon";
 
 // Styling
-import "components/Navbar/Navbar.scss";
+import "components/Navbar/navbar.scss";
 import { useLocation } from "react-router-dom";
 
 const NavBar = ({ routes }: NavBarProps) => {
