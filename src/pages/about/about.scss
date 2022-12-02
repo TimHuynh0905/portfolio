@@ -1,159 +1,159 @@
 .about {
-    padding: 50px 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 50px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    margin: 0;
+  }
+
+  .row {
+    margin: auto;
     width: 100%;
 
-    h2 {
-        margin: 0;
+    [class^="col-"] {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+  }
 
-    .row {
-        margin: auto;
+  #intro {
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+    #image {
+      .profile-image {
         width: 100%;
+        max-width: 300px;
+        height: 375px;
+        position: relative;
 
-        [class^="col-"] {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .image {
+          width: 100%;
+          height: 100%;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 10px;
+          box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
+            0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
         }
-    }
+      }
 
-    #intro {
+      .socials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 15px;
+
         @media screen and (min-width: 1200px) {
-            margin-bottom: 50px;
-        }
-        #image {
-            .profile-image {
-                width: 100%;
-                max-width: 300px;
-                height: 375px;
-                position: relative;
-
-                .image {
-                    width: 100%;
-                    height: 100%;
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    border-radius: 10px;
-                    box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
-                        0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
-                }
-            }
-
-            .socials {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-                margin-top: 15px;
-
-                @media screen and (min-width: 1200px) {
-                    position: absolute;
-                    bottom: -50px;
-                }
-
-                a {
-                    margin-left: 5px;
-                    margin-right: 5px;
-                    text-decoration: none;
-
-                    &:before {
-                        font-size: 2.25em;
-                    }
-                }
-            }
+          position: absolute;
+          bottom: -50px;
         }
 
-        #info {
-            text-align: center;
+        a {
+          margin-left: 5px;
+          margin-right: 5px;
+          text-decoration: none;
 
-            .container {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-
-                p {
-                    margin: 0;
-                    color: rgb(119, 119, 119);
-                }
-
-                #quote {
-                    font-size: 1.5em;
-                    font-weight: 300;
-                    font-style: italic;
-                }
-
-                #left {
-                    font-size: 1.25em;
-                    font-weight: 300;
-                    font-style: italic;
-                }
-
-                #right {
-                    font-size: 1.25em;
-                    font-weight: 700;
-                }
-
-                @media screen and (max-width: 1200px) {
-                    padding: 0;
-                }
-
-                @media screen and (max-width: 450px) {
-                    #quote {
-                        font-size: 1em;
-                    }
-                }
-            }
+          &:before {
+            font-size: 2.25em;
+          }
         }
+      }
     }
 
-    #skills {
-        .skill {
-            padding-bottom: 3.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    #info {
+      text-align: center;
 
-            h3 {
-                font-weight: 400;
-                margin-bottom: 25px;
-            }
+      .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
 
-            p {
-                margin: 0;
-                i {
-                    font-size: 2.75em;
-                    margin: 0 5px;
-
-                    @media screen and (max-width: 450px) {
-                        font-size: 2em;
-                    }
-                }
-            }
-
-            &:last-child {
-                padding-bottom: 0;
-            }
+        p {
+          margin: 0;
+          color: rgb(119, 119, 119);
         }
-    }
 
-    #resume {
-        .button {
-            font-size: 1.5em;
-            font-weight: 300;
-            border-radius: 0;
-            box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
-                0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
+        #quote {
+          font-size: 1.5em;
+          font-weight: 300;
+          font-style: italic;
         }
-    }
 
-    @media screen and (max-width: 1200px) {
-        padding: 40px 0px;
+        #left {
+          font-size: 1.25em;
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        #right {
+          font-size: 1.25em;
+          font-weight: 700;
+        }
+
+        @media screen and (max-width: 1200px) {
+          padding: 0;
+        }
+
+        @media screen and (max-width: 450px) {
+          #quote {
+            font-size: 1em;
+          }
+        }
+      }
     }
+  }
+
+  #skills {
+    .skill {
+      padding-bottom: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-weight: 400;
+        margin-bottom: 25px;
+      }
+
+      p {
+        margin: 0;
+        i {
+          font-size: 2.75em;
+          margin: 0 5px;
+
+          @media screen and (max-width: 450px) {
+            font-size: 2em;
+          }
+        }
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  #resume {
+    .button {
+      font-size: 1.5em;
+      font-weight: 300;
+      border-radius: 0;
+      box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
+        0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 40px 0px;
+  }
 }

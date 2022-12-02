@@ -1,47 +1,52 @@
 import React from "react";
 
-// Material UI Components
-import { Timeline as MUTimeline } from "@mui/lab";
-import { ThemeProvider, Typography } from "@mui/material";
-
 // Components
-import TimelineItem from "components/Timeline/TimelineItem/timelineitem";
+import Experience from "components/Timeline/Experience/Experience";
 
-// Styling
-import theme from "components/Timeline/theme";
-import { ExperienceItemProps } from "configs/interfaces";
+// Font Awesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+
+// Interfaces
+import { ExperienceProps } from "configs/interfaces";
+
+// Styles
+import "./Timeline.scss";
 
 interface TimeLineProps {
-    items: ExperienceItemProps[];
+  items: ExperienceProps[];
 }
 
 const Timeline = ({ items }: TimeLineProps) => {
-    return (
-        <ThemeProvider theme={theme}>
-            <MUTimeline position="alternate">
-                {items.map((item, key) => (
-                    <TimelineItem key={key} {...item} />
-                ))}
-            </MUTimeline>
-            <Typography
-                variant="subtitle1"
-                color="text.secondary"
-                style={{
-                    marginTop: "30px",
-                }}
-            >
-                Note:{" "}
-                <Typography
-                    component="span"
-                    style={{
-                        fontWeight: "700",
-                    }}
-                >
-                    SWE = Software Engineer(ing)
-                </Typography>
-            </Typography>
-        </ThemeProvider>
-    );
+  return (
+    <div className="timeline">
+      {items.length > 0 && (
+        <div className="timeline-container">
+          {items.map((item, key) => {
+            const today = new Date();
+            const timelineColor =
+              today <= (item.endDate || today) ? "#6f6866" : "#ccdad1";
+            return (
+              <div
+                key={key}
+                className="timeline-item"
+                style={
+                  {
+                    "--timeline-color": timelineColor,
+                  } as React.CSSProperties
+                }
+              >
+                <Experience item={item} />
+                <div className="timeline-item__icon">
+                  <FontAwesomeIcon icon={faBriefcase} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Timeline;
