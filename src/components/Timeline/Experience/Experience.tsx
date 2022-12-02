@@ -33,7 +33,6 @@ const Experience = ({ item }: IExperience): JSX.Element => {
           src={item.logo}
           alt="logo"
           className="experience__company"
-          loading="lazy"
         />
         {item.skills.length > 0 && (
           <span className="experience__skills">

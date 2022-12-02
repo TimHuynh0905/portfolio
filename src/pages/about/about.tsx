@@ -16,12 +16,7 @@ const About = () => {
       <div id="intro" className="container">
         <div className="row">
           <div id="image" className="col-12 col-sm-12 col-lg-4">
-            <img
-              className="image"
-              alt="profile"
-              src={ProfilePic}
-              loading="lazy"
-            />
+            <img className="image" alt="profile" src={ProfilePic} />
             <div className="socials">
               {socials.map((social) => (
                 <a
