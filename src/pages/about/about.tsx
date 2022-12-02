@@ -16,14 +16,7 @@ const About = () => {
       <div id="intro" className="container">
         <div className="row">
           <div id="image" className="col-12 col-sm-12 col-lg-4">
-            <div className="profile-image">
-              <div
-                className="image"
-                style={{
-                  backgroundImage: `url(${ProfilePic})`,
-                }}
-              />
-            </div>
+            <img className="image" alt="profile" src={ProfilePic} />
             <div className="socials">
               {socials.map((social) => (
                 <a

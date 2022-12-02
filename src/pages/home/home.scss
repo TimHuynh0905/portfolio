@@ -25,6 +25,10 @@
       margin-bottom: 0;
     }
 
+    code {
+      font-size: 24px;
+    }
+
     p {
       letter-spacing: -0.015em;
       font-weight: 300;
@@ -48,17 +52,6 @@
     padding: 0;
     overflow: hidden;
     flex: 1;
-    .image {
-      // border: 1px solid blue;
-      position: relative;
-      z-index: -1;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: calc(100vh - 220px * 2);
-      box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
-        0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
-    }
 
     img {
       width: 100%;

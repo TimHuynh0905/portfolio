@@ -1,10 +1,8 @@
 // Companies' Logos
 import CRUS from "assets/images/companies/cirrus_logic.svg";
 import COF from "assets/images/companies/capital_one.png";
-// import ADP from "assets/images/companies/advantage_prep.png";
 import RP from "assets/images/companies/right_price.png";
 import IAI from "assets/images/companies/instra_ai.png";
-// import WSU from "assets/images/companies/wayne_state.png";
 import AMZN from "assets/images/companies/amazon.png";
 import SLAI from "assets/images/companies/slai.svg";
 
@@ -54,31 +52,6 @@ const experiences: ExperienceProps[] = [
       "devicon-bitbucket-original colored",
     ],
   },
-  // {
-  //   startDate: new Date(2021, 9),
-  //   endDate: new Date(2022, 0),
-  //   location: "Evanston, IL",
-  //   role: "SWE - Self-employed",
-  //   logo: ADP,
-  //   skills: [
-  //     "devicon-react-original colored",
-  //     "devicon-materialui-plain colored",
-  //     "devicon-amazonwebservices-plain colored",
-  //   ],
-  // },
-  // {
-  //   startDate: new Date(2021, 7),
-  //   endDate: new Date(2021, 7),
-  //   location: "Remote, US",
-  //   role: "SWE Summit (SES)",
-  //   logo: COF,
-  //   skills: [
-  //     "devicon-react-original colored",
-  //     "devicon-express-original colored",
-  //     "devicon-firebase-plain colored",
-  //     "devicon-github-original colored",
-  //   ],
-  // },
   {
     startDate: new Date(2021, 5),
     endDate: new Date(2021, 7),
@@ -105,14 +78,6 @@ const experiences: ExperienceProps[] = [
       "devicon-postgresql-plain colored",
     ],
   },
-  // {
-  //   startDate: new Date(2020, 1),
-  //   endDate: new Date(2020, 4),
-  //   location: "Detroit, MI",
-  //   role: "Lab Assistant",
-  //   logo: WSU,
-  //   skills: ["devicon-python-plain colored"],
-  // },
 ];
 
 export default experiences;

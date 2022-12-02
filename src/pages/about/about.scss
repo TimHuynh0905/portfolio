@@ -27,22 +27,13 @@
       margin-bottom: 50px;
     }
     #image {
-      .profile-image {
-        width: 100%;
-        max-width: 300px;
-        height: 375px;
-        position: relative;
-
-        .image {
-          width: 100%;
-          height: 100%;
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-          border-radius: 10px;
-          box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
-            0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
-        }
+      img.image {
+        display: block;
+        height: auto;
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0rem 0.5rem 1.625rem -0.25rem rgb(20 20 20 / 15%),
+          0rem 0.5rem 0.5625rem -0.3125rem rgb(20 20 20 / 6%);
       }
 
       .socials {
