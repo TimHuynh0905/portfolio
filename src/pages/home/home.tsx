@@ -25,7 +25,7 @@ const Home = () => {
           <p>&#9917;&#127934;&#128200;</p>
         </div>
         <div id="cover" className="col-12 col-lg-6">
-          <img alt="cover" src={CoverImage} />
+          <img alt="cover" src={CoverImage} loading="lazy" />
         </div>
       </div>
     </div>
