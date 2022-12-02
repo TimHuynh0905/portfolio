@@ -45,9 +45,6 @@ const Timeline = ({ items }: TimeLineProps) => {
           })}
         </div>
       )}
-      <span>
-        Note: <b>SWE = Software Engineer(ing)</b>
-      </span>
     </div>
   );
 };

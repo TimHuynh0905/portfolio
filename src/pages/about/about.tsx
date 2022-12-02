@@ -84,7 +84,7 @@ const About = () => {
           ))}
         </div>
       </div>
-      <hr className="w-100 my-5" />
+      {/* <hr className="w-100 my-5" />
       <div id="resume">
         <a
           href="https://drive.google.com/file/d/1YEMnrILQqU8Catr4PYDG-U99vxkDz6iH/view?usp=sharing"
@@ -95,7 +95,7 @@ const About = () => {
         >
           Resume
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
