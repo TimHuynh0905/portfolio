@@ -1,6 +1,6 @@
 export const particles = {
   background: {
-    color: "#2d2d2d",
+    color: "#38302E",
     position: "50% 50%",
     repeat: "no-repeat",
     size: "cover",

@@ -1,36 +1,51 @@
 // Companies' Logos
 import CRUS from "assets/images/companies/cirrus_logic.svg";
 import COF from "assets/images/companies/capital_one.png";
-import ADP from "assets/images/companies/advantage_prep.png";
+// import ADP from "assets/images/companies/advantage_prep.png";
 import RP from "assets/images/companies/right_price.png";
 import IAI from "assets/images/companies/instra_ai.png";
-import WSU from "assets/images/companies/wayne_state.png";
+// import WSU from "assets/images/companies/wayne_state.png";
+import AMZN from "assets/images/companies/amazon.png";
+import SLAI from "assets/images/companies/slai.svg";
 
 // Interface
-import { ExperienceItemProps } from "configs/interfaces";
+import { ExperienceProps } from "configs/interfaces";
 
-const experiences: ExperienceItemProps[] = [
+const experiences: ExperienceProps[] = [
+  {
+    startDate: new Date(2023, 5),
+    endDate: new Date(2023, 8),
+    location: "Austin, TX",
+    role: "Intern",
+    logo: AMZN,
+    skills: [],
+  },
+  {
+    startDate: new Date(2022, 11),
+    location: "Boston, MA",
+    role: "Part-time",
+    logo: SLAI,
+    skills: [],
+  },
   {
     startDate: new Date(2022, 5),
     endDate: new Date(2022, 7),
     location: "Plano, TX",
-    role: "SWE - Intern",
+    role: "Intern",
     logo: COF,
     skills: [
-      "devicon-typescript-plain colored",
       "devicon-angularjs-plain colored",
-      "devicon-amazonwebservices-plain colored",
       "devicon-jest-plain colored",
       "devicon-webpack-plain colored",
       "devicon-terraform-plain colored",
-      "devicon-github-original colored",
+      "devicon-amazonwebservices-plain colored",
     ],
   },
   {
     startDate: new Date(2022, 0),
     endDate: new Date(2022, 4),
     location: "Austin, TX",
-    role: "SWE - Intern",
+    role: "Intern",
     logo: CRUS,
     skills: [
       "devicon-python-plain colored",
@@ -68,7 +83,7 @@ const experiences: ExperienceItemProps[] = [
     startDate: new Date(2021, 5),
     endDate: new Date(2021, 7),
     location: "Los Angeles, CA",
-    role: "SWE - Intern",
+    role: "Intern",
     logo: RP,
     skills: [
       "devicon-nextjs-original colored",
@@ -81,7 +96,7 @@ const experiences: ExperienceItemProps[] = [
     startDate: new Date(2020, 10),
     endDate: new Date(2021, 4),
     location: "Aurora, IL",
-    role: "SWE - Intern",
+    role: "Part-time",
     logo: IAI,
     skills: [
       "devicon-flask-original colored",

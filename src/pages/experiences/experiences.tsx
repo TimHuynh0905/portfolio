@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import Timeline from "components/Timeline/timeline";
+import Timeline from "components/Timeline/Timeline";
 
 // Data
 import experiences from "pages/experiences/data";
@@ -15,7 +15,9 @@ const Experiences = () => {
       <h2 className="mb-5">&lt; Experiences &#128104;&#8205;&#128187;/&gt;</h2>
       <Timeline
         items={experiences.sort(
-          (a, b) => b.endDate.getTime() - a.endDate.getTime()
+          (a, b) =>
+            (b.endDate || new Date()).getTime() -
+            (a.endDate || new Date()).getTime()
         )}
       />
     </div>

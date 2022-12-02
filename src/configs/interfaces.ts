@@ -21,11 +21,11 @@ export interface RouteProps {
   icon: IconDefinition;
 }
 
-export interface ExperienceItemProps {
+export interface ExperienceProps {
   startDate: Date;
-  endDate: Date;
+  endDate?: Date;
   location: string;
   logo: string;
-  role: string;
+  role: "Full-time" | "Part-time" | "Intern" | "Researcher";
   skills: string[];
 }
