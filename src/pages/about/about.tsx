@@ -12,7 +12,7 @@ import "pages/about/about.scss";
 const About = () => {
   return (
     <div className="panel about">
-      <h2 className="mb-5">&lt; About &#9996;/&gt;</h2>
+      <h2 className="mb-5">&lt; About &#128526;/&gt;</h2>
       <div id="intro" className="container">
         <div className="row">
           <div id="image" className="col-12 col-sm-12 col-lg-4">

@@ -62,7 +62,7 @@
       border-right: solid 2em transparent;
       transition: border-bottom-width 0.25s ease-in-out;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 992px) {
         display: none;
       }
     }

@@ -22,7 +22,7 @@ const Home = () => {
           >
             &lt;Software Engineer /&gt;
           </code>
-          <p>&#9917;&#127934;&#128200;&#128075;</p>
+          <p>&#9917;&#127934;&#128200;</p>
         </div>
         <div id="cover" className="col-12 col-lg-6">
           <img alt="cover" src={CoverImage} />

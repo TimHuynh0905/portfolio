@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Packages
 import { useLocation } from "react-router-dom";
@@ -11,7 +11,7 @@ import About from "pages/about/about";
 import Experiences from "pages/experiences/experiences";
 
 // Components
-import NavBar from "components/Navbar/navbar";
+import NavBar from "components/Navbar/Navbar";
 import Footer from "components/Footer/footer";
 
 // Particles.js
@@ -21,6 +21,7 @@ import { particles } from "./configs/particles";
 // Stylings
 import "./App.scss";
 import withAnimation from "lib/withAnimation";
+import SmallNavbar from "components/Navbar/Small/SmallNavbar";
 
 const AnimatedHome = withAnimation(Home);
 const AnimatedAbout = withAnimation(About);
@@ -29,6 +30,9 @@ const AnimatedExperiences = withAnimation(Experiences);
 const App = () => {
   const location = useLocation();
   const [hash, setHash] = useState<string>(location.hash);
+  const [navSize, setNavSize] = useState<"small" | "large">(
+    window.innerWidth < 550 ? "small" : "large"
+  );
 
   const setHeight = (expectedHash: string): Height => {
     if (location.hash === expectedHash && hash === expectedHash) {
@@ -37,12 +41,31 @@ const App = () => {
     return 0;
   };
 
+  useEffect(() => {
+    const handleWindowResize = () => {
+      const expectedSize = window.innerWidth < 550 ? "small" : "large";
+      setNavSize((currSize) =>
+        currSize !== expectedSize ? expectedSize : currSize
+      );
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  });
+
   return (
     <div className="App">
       {/* Wrapper */}
       <div id="container">
         {/* Navigation */}
-        <NavBar routes={routes} />
+        {navSize === "large" ? (
+          <NavBar routes={routes} />
+        ) : (
+          <SmallNavbar routes={routes} />
+        )}
         {/* Main Content */}
         <div id="main">
           <AnimatedHome
